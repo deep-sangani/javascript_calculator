@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>calculator</title>
+</head>
+<body>
+    <script>
+      
+        function display(value){
+            document.getElementById("display").value+=value;
+            
+        }
+
+        function cleardisplay(){
+            console.log("clear");
+            document.getElementById("display").value=0
+        }
+        function evaldisplay(){
+            let str = document.getElementById("display").value
+            console.log(str);
+            let r = eval(str);
+            document.getElementById("display").value=r
+            console.log(r);
+       
+
+        }
+    </script>
+    <div class="main">
+        <div class="calc-body">
+            <input class="display" placeholder="0"  id="display"/>
+                
+         
+            <div class="keys">
+                
+                 <div class="row">
+                <button onclick="display('7')" #20353d class="key">7</button>
+                 <button onclick="display('8')"  class="key color">8</button>
+                  <button onclick="display('9')"   class="key color">9</button>
+                  <button onclick="display('/')"   class="key color">/</button>
+                </div>
+                <div class="row">
+                    <button onclick="display('4')"   class="key">4</button>
+                 <button onclick="display('5')"   class="key color">5</button>
+                  <button onclick="display('6')"   class="key">6</button>
+                  <button onclick="display('*')"  class="key">*</button>
+                </div>
+                <div class="row">
+                    <button onclick="display('1')"   class="key">1</button>
+                 <button onclick="display('2')" class="key color ">2</button>
+                  <button onclick="display('3')" class="key color">3</button>
+                  <button onclick="display('-')" class="key color">-</button>
+                </div>
+                <div class="row">
+                    <button onclick="display('0')" class="key">0</button>
+                 <button onclick="display('.')" class="key">.</button>
+                  <button class="key" onclick="cleardisplay()">C</button>
+                  <button onclick="display('+')" class="key color">+</button>
+                </div>
+                <div class="row">
+                    <button class="key color" onclick="evaldisplay()" style="width: 100%;text-align: center;">=</button>
+                </div>
+                  
+            </div>
+        </div>
+    </div>
+</body>
+</html>
